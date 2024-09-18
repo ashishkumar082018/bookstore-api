@@ -1,0 +1,570 @@
+{
+	"info": {
+		"_postman_id": "303cdc7b-2799-4ca9-bdd9-3b11b853f67d",
+		"name": "bookstore-api-postman",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "34082272"
+	},
+	"item": [
+		{
+			"name": "Books",
+			"item": [
+				{
+					"name": "List all books",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3000/api/books"
+					},
+					"response": [
+						{
+							"name": "List all books",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:3000/api/books"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "492"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1ec-oaE73csiM/Gco3oQp9DbnlTUMD4\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 18 Sep 2024 05:41:44 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"title\": \"The Great Gatsby\",\n        \"author\": \"F. Scott Fitzgerald\",\n        \"price\": \"10.99\",\n        \"stock\": 5,\n        \"createdAt\": \"2024-09-17T12:48:13.000Z\",\n        \"updatedAt\": \"2024-09-17T12:48:13.000Z\"\n    },\n    {\n        \"id\": 2,\n        \"title\": \"To Kill a Mockingbird\",\n        \"author\": \"Harper Lee\",\n        \"price\": \"8.99\",\n        \"stock\": 10,\n        \"createdAt\": \"2024-09-17T12:48:13.000Z\",\n        \"updatedAt\": \"2024-09-17T12:48:13.000Z\"\n    },\n    {\n        \"id\": 3,\n        \"title\": \"1984\",\n        \"author\": \"George Orwell\",\n        \"price\": \"12.99\",\n        \"stock\": 8,\n        \"createdAt\": \"2024-09-17T12:48:13.000Z\",\n        \"updatedAt\": \"2024-09-17T12:48:13.000Z\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Book Detail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3000/api/books/1"
+					},
+					"response": [
+						{
+							"name": "Get Book Detail",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:3000/api/books/1"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "170"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"aa-HM7MSRHeDe+moKEY4oiS+7zikC0\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 17 Sep 2024 13:43:32 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"title\": \"The Great Gatsby\",\n    \"author\": \"F. Scott Fitzgerald\",\n    \"price\": \"10.99\",\n    \"stock\": 5,\n    \"createdAt\": \"2024-09-17T12:48:13.000Z\",\n    \"updatedAt\": \"2024-09-17T12:48:13.000Z\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Cart",
+			"item": [
+				{
+					"name": "Get cart details for the authenticated user.",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzI2NTc4NzIzLCJleHAiOjE3MjY1ODIzMjN9.FzrIgT60nQ36gUPUwOZDdnWxI0yZJgdqDsMbqZe5MQw",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:3000/api/cart"
+					},
+					"response": [
+						{
+							"name": "Get cart details for the authenticated user.",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzI2NTc4NzIzLCJleHAiOjE3MjY1ODIzMjN9.FzrIgT60nQ36gUPUwOZDdnWxI0yZJgdqDsMbqZe5MQw",
+										"type": "text"
+									}
+								],
+								"url": "http://localhost:3000/api/cart"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "4"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4-K+iMpCQsduglOsYkdIUQZQMtaDM\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 17 Sep 2024 13:43:51 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "null"
+						}
+					]
+				},
+				{
+					"name": "Add a Book to the cart",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "http://localhost:3000/api/cart"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a book from the cart",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/cart/:itemId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"cart",
+								":itemId"
+							],
+							"variable": [
+								{
+									"key": "itemId",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Orders",
+			"item": [
+				{
+					"name": "Place an order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "http://localhost:3000/api/orders"
+					},
+					"response": [
+						{
+							"name": "Place an order",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiaWF0IjoxNzI2NjM4Mjc0LCJleHAiOjE3MjY2NDE4NzR9.5wentXenyCaSYs1-_x7lYOXE6M6bzKtzBMH5KTE62DI",
+										"type": "text"
+									}
+								],
+								"url": "http://localhost:3000/api/orders"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "116"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"74-5dyz8l0hcZ94V3fX1ZtNH8hL5kA\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 18 Sep 2024 05:47:28 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"UserId\": 4,\n    \"totalPrice\": 65.94,\n    \"updatedAt\": \"2024-09-18T05:47:28.383Z\",\n    \"createdAt\": \"2024-09-18T05:47:28.383Z\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Register a new User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\" : \"abc\",\r\n    \"password\" : \"abc\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/auth/register"
+					},
+					"response": [
+						{
+							"name": "Register a new User",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\" : \"abc\",\r\n    \"password\" : \"abc\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:3000/api/auth/register"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "149"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"95-xBriELeyFIYu5jpX50dzQi8y3ns\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 18 Sep 2024 05:01:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiaWF0IjoxNzI2NjM1NjYyLCJleHAiOjE3MjY2MzkyNjJ9.aae4-ArT-YpeKmmBe3OrPYzW_T9HtV5Ly3T4XrDfAcc\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Login a user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "http://localhost:3000/api/auth/login"
+					},
+					"response": [
+						{
+							"name": "Login a user",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\" : \"abc\",\r\n    \"password\" : \"abc\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:3000/api/auth/login"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "149"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"95-p1JHc0sXUmZPOTh/XfLzSuDmaLg\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 18 Sep 2024 05:02:44 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiaWF0IjoxNzI2NjM1NzY0LCJleHAiOjE3MjY2MzkzNjR9.SQlKDMBCYE5r3Ced4bvbl5rO65C_YBYuVo_6idBl-tU\"\n}"
+						}
+					]
+				},
+				{
+					"name": "View order history for the authenticated user",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzI2NTc4NzIzLCJleHAiOjE3MjY1ODIzMjN9.FzrIgT60nQ36gUPUwOZDdnWxI0yZJgdqDsMbqZe5MQw",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:3000/api/orders"
+					},
+					"response": [
+						{
+							"name": "View order history for the authenticated user",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiaWF0IjoxNzI2NjM1NjYyLCJleHAiOjE3MjY2MzkyNjJ9.aae4-ArT-YpeKmmBe3OrPYzW_T9HtV5Ly3T4XrDfAcc",
+										"type": "text"
+									}
+								],
+								"url": "http://localhost:3000/api/orders"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "274"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"112-3DIJjGYyDKVm1aEsULaYEpf5arU\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 18 Sep 2024 05:48:34 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 2,\n        \"totalPrice\": \"65.94\",\n        \"createdAt\": \"2024-09-18T05:47:28.000Z\",\n        \"updatedAt\": \"2024-09-18T05:47:28.000Z\",\n        \"UserId\": 4,\n        \"OrderItems\": [\n            {\n                \"id\": 2,\n                \"quantity\": 6,\n                \"price\": \"10.99\",\n                \"createdAt\": \"2024-09-18T05:47:28.000Z\",\n                \"updatedAt\": \"2024-09-18T05:47:28.000Z\",\n                \"OrderId\": 2,\n                \"BookId\": 1\n            }\n        ]\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Order details",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzI2NTc4NzIzLCJleHAiOjE3MjY1ODIzMjN9.FzrIgT60nQ36gUPUwOZDdnWxI0yZJgdqDsMbqZe5MQw",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:3000/api/orders/1"
+					},
+					"response": [
+						{
+							"name": "Get Order details",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiaWF0IjoxNzI2NjM4Mjc0LCJleHAiOjE3MjY2NDE4NzR9.5wentXenyCaSYs1-_x7lYOXE6M6bzKtzBMH5KTE62DI",
+										"type": "text"
+									},
+									{
+										"key": "",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": "http://localhost:3000/api/orders/2"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "272"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"110-hNoKq3WrG9/EDLR2h75Nq7K/RGA\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 18 Sep 2024 05:49:10 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"totalPrice\": \"65.94\",\n    \"createdAt\": \"2024-09-18T05:47:28.000Z\",\n    \"updatedAt\": \"2024-09-18T05:47:28.000Z\",\n    \"UserId\": 4,\n    \"OrderItems\": [\n        {\n            \"id\": 2,\n            \"quantity\": 6,\n            \"price\": \"10.99\",\n            \"createdAt\": \"2024-09-18T05:47:28.000Z\",\n            \"updatedAt\": \"2024-09-18T05:47:28.000Z\",\n            \"OrderId\": 2,\n            \"BookId\": 1\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
